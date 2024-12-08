@@ -6,7 +6,30 @@
     <!-- tailwind and daisy cdn -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
+    <!-- custom color for tailwind use  -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+              }
+            }
+          }
+        }
+      </script>
+      <!-- google font are here  -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
+      <style>
+        .font-garamond{
+            font-family: "EB Garamond", serif;
+        }
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }
+      </style>
     <title>Legal Farm :: Landing Page</title>
 </head>
 <body>
