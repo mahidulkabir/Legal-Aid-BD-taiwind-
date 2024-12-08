@@ -1,41 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- tailwind and daisy cdn -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- custom color for tailwind use  -->
     <script>
-        tailwind.config = {
-          theme: {
-            extend: {
-              colors: {
-                clifford: '#da373d',
-              }
-            }
-          }
-        }
-      </script>
-      <!-- google font are here  -->
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:wght@400;700;800&display=swap" rel="stylesheet">
-      <style>
-        .font-garamond{
-            font-family: "EB Garamond", serif;
-        }
-        .font-poppins{
-            font-family: "Poppins", sans-serif;
-        }
-      </style>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              clifford: "#da373d",
+              "common-btn-color": "#B68C5A",
+              "common-p-color": "#707070",
+            },
+          },
+        },
+      };
+    </script>
+    <!-- google font are here  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Poppins:wght@400;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .font-garamond {
+        font-family: "EB Garamond", serif;
+      }
+      .font-poppins {
+        font-family: "Poppins", sans-serif;
+      }
+    </style>
     <title>Legal Farm :: Landing Page</title>
-</head>
-<body>
-    <header>
-      <nav>
-        <div class="navbar bg-base-200">
+  </head>
+  <body>
+    <header class="container mx-auto">
+      <!-- nav bar section  -->
+      <nav class="mt-10">
+        <div class="navbar bg-base-100">
           <div class="navbar-start">
             <div class="dropdown">
               <!-- hidden for large screen  -->
@@ -45,17 +55,20 @@
                   class="h-5 w-5"
                   fill=" none"
                   viewBox="0 0 24 24"
-                  stroke="currentColor">
+                  stroke="currentColor"
+                >
                   <path
                     stroke-linecap="round"
                     stroke-linejoin="round"
                     stroke-width="2"
-                    d="M4 6h16M4 12h8m-8 6h16" />
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
                 </svg>
               </div>
               <ul
                 tabindex="0"
-                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow font-bold">
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow text-common-p-color"
+              >
                 <li><a>Home</a></li>
                 <li><a>Services</a></li>
                 <li><a>Cases</a></li>
@@ -63,31 +76,59 @@
                 <li><a>Contact Us</a></li>
               </ul>
             </div>
-            <a class="btn btn-ghost text-2xl"><img src="./images/main logo.png" alt="" class="w-24">   LEGAL AID BD</a>
+            <div>
+              <a class="btn btn-ghost text-2xl font-garamond"
+                ><img src="./images/main logo.png " alt="" class="w-24" />
+              </a>
+            </div>
           </div>
           <!-- hidden for small screen  -->
-          <div class="navbar-center hidden lg:flex">
-            <ul class="menu menu-horizontal px-1 font-bold">
-              
-             
-                <li><a>Home</a></li>
-                <li><a>Services</a></li>
-                <li><a>Cases</a></li>
-                <li><a>Blog</a></li>
-                <li><a>Contact Us</a></li>
+          <div class="navbar-center hidden lg:flex text-common-p-color">
+            <ul class="menu menu-horizontal px-1">
+              <li><a>Home</a></li>
+              <li><a>Services</a></li>
+              <li><a>Cases</a></li>
+              <li><a>Blog</a></li>
+              <li><a>Contact Us</a></li>
             </ul>
           </div>
-          <div class="navbar-end ">
-            <a class="btn bg-red-300">Free Consultation</a>
+          <div class="navbar-end">
+            <a class="btn bg-common-btn-color text-white">Free Consultation</a>
           </div>
         </div>
       </nav>
+
+      <!-- banner section  -->
+      <div class="hero" style="background-image: url(./images/banner.png)">
+        <div class="hero-overlay bg-opacity-60"></div>
+        <div class="hero-content text-center lg:px-40">
+          <div class="">
+            <h1
+              class="text-5xl lg:text-7xl font-garamond font-extrabold text-white mt-7 lg:mt-[100px]"
+            >
+              We Provide Effective <br />
+              Legal Solutions
+            </h1>
+            <p class="mb-5 mt-5 text-slate-200">
+              There are many variations of passages of Lorem Ipsum available,
+              but the majority have suffered alteration in some form, by
+              injected humour.
+            </p>
+            <div class="mt-7 mb-[100px] space-y-5">
+              <input
+                type="text"
+                placeholder="Search Your Services"
+                class="input input-bordered w-full max-w-xs"
+              />
+              <button class="btn bg-common-btn-color border-none text-white ">
+                Search
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
-    <main>
-
-    </main>
-    <footer>
-
-    </footer>
-</body>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
